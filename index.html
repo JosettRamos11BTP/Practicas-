@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Galería – JIRE Web Studio</title>
+
+  <style>
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    body{
+      font-family:Arial,sans-serif;
+      background:#ffffff;
+      color:#0F172A;
+    }
+
+    
+    .galeria{
+      padding:50px 20px;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    .galeria h2{
+      font-size:2rem;
+      text-align:center;
+      margin-bottom:10px;
+      color:#0F172A;
+    }
+
+    .descripcion{
+      text-align:center;
+      color:#555;
+      margin-bottom:40px;
+      font-size:1rem;
+    }
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:25px;
+    }
+
+    
+    .tarjeta{
+      background:#f4f7ff;
+      border:1px solid #d0dcff;
+      border-radius:15px;
+      overflow:hidden;
+      transition:0.3s ease;
+      animation:aparecer 0.8s ease;
+    }
+
+    .tarjeta:hover{
+      transform:translateY(-10px) scale(1.02);
+      box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    
+    .tarjeta-img{
+      width:100%;
+      height:220px;
+      background:#dce8ff;
+      overflow:hidden;
+    }
+
+    .tarjeta-img img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      transition:0.4s;
+    }
+
+    .tarjeta:hover img{
+      transform:scale(1.08);
+    }
+
+    /* INFO */
+    .tarjeta-info{
+      padding:20px;
+    }
+
+    .categoria{
+      display:inline-block;
+      background:#0F172A;
+      color:#8eb2ff;
+      font-size:.7rem;
+      font-weight:bold;
+      padding:5px 12px;
+      border-radius:20px;
+      margin-bottom:12px;
+      text-transform:uppercase;
+      letter-spacing:1px;
+    }
+
+    .tarjeta-info h3{
+      font-size:1.1rem;
+      margin-bottom:10px;
+    }
+
+    .tarjeta-info p{
+      font-size:.9rem;
+      color:#555;
+      line-height:1.6;
+    }
+
+    
+    @keyframes aparecer{
+      from{
+        opacity:0;
+        transform:translateY(30px);
+      }
+
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    
+    @media(max-width:768px){
+
+      .galeria h2{
+        font-size:1.6rem;
+      }
+
+      .descripcion{
+        font-size:.9rem;
+      }
+
+      .tarjeta-img{
+        height:200px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+<section class="galeria">
+
+  <h2>Galería de Proyectos</h2>
+
+  <p class="descripcion">
+    Conoce algunos de los servicios y proyectos desarrollados por nuestra empresa de diseño y desarrollo web.
+  </p>
+
+  <div class="grid">
+
+    <!-- TARJETA 1 -->
+    <div class="tarjeta">
+
+      <div class="tarjeta-img">
+        <!-- PON TU IMAGEN AQUÍ -->
+        <img src="imagen1.jpg" alt="Desarrollo Web">
+      </div>
+
+      <div class="tarjeta-info">
+        <span class="categoria">Desarrollo Web</span>
+
+        <h3>Sitios Web a Medida</h3>
+
+        <p>
+          Creamos páginas modernas, rápidas y totalmente personalizadas para cada negocio.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- TARJETA 2 -->
+    <div class="tarjeta">
+
+      <div class="tarjeta-img">
+        <!-- PON TU IMAGEN AQUÍ -->
+        <img src="imagen2.avif" alt="Diseño UI UX">
+      </div>
+
+      <div class="tarjeta-info">
+        <span class="categoria">Diseño UI/UX</span>
+
+        <h3>Interfaces Modernas</h3>
+
+        <p>
+          Diseños intuitivos y atractivos enfocados en la experiencia del usuario.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- TARJETA 3 -->
+    <div class="tarjeta">
+
+      <div class="tarjeta-img">
+        <!-- PON TU IMAGEN AQUÍ -->
+        <img src="imagen3.jpg" alt="Responsive Design">
+      </div>
+
+      <div class="tarjeta-info">
+        <span class="categoria">Responsive Design</span>
+
+        <h3>Diseño Adaptable</h3>
+
+        <p>
+          Sitios web optimizados para celulares, tablets y computadoras.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- TARJETA 4 -->
+    <div class="tarjeta">
+
+      <div class="tarjeta-img">
+        <!-- PON TU IMAGEN AQUÍ -->
+        <img src="imagen4.jpg" alt="Tiendas Online">
+      </div>
+
+      <div class="tarjeta-info">
+        <span class="categoria">Tiendas Online</span>
+
+        <h3>E-Commerce</h3>
+
+        <p>
+          Tiendas virtuales con catálogo, carrito y sistema de pagos online.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+</body>
+</html>
